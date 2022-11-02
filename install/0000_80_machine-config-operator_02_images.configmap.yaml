@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: machine-config-operator-images
+  namespace: uccp-machine-config-operator
+  annotations:
+    include.release.uccp.io/ibm-cloud-managed: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
+    include.release.uccp.io/single-node-developer: "true"
+data:
+  images.json: >
+    {
+      "releaseVersion": "0.0.1-snapshot",
+      "machineConfigOperator": "registry.svc.ci.uccp.org/uccp:machine-config-operator",
+      "etcd": "registry.svc.ci.uccp.org/uccp:etcd",
+      "infraImage": "registry.svc.ci.uccp.org/uccp:pod",
+      "kubeClientAgentImage": "registry.svc.ci.uccp.org/uccp:kube-client-agent",
+      "clusterEtcdOperatorImage": "registry.svc.ci.uccp.org/uccp:cluster-etcd-operator",
+      "keepalivedImage": "registry.svc.ci.uccp.org/uccp:keepalived-ipfailover",
+      "corednsImage": "registry.svc.ci.uccp.org/uccp:coredns",
+      "haproxyImage": "registry.svc.ci.uccp.org/uccp:haproxy-router",
+      "baremetalRuntimeCfgImage": "registry.svc.ci.uccp.org/uccp:baremetal-runtimecfg",
+      "oauthProxy": "registry.svc.ci.uccp.org/uccp:oauth-proxy"
+    }

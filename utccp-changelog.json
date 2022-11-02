@@ -1,0 +1,70 @@
+{
+    "changelog":[
+        {
+            "date": "2022-10-31",
+            "version": "1.2.1-rc7-1",
+            "author": "jizongyao",
+            "changes": "update uccp api"
+        },
+        {
+            "date":"2022-6-18",
+            "version":"1.2.1-rc5-1",
+            "author":"jizongyao",
+            "changes":"initializeControlPlane not return error on non-CoreOS systems"
+        },
+        {
+            "date":"2022-5-26",
+            "version":"1.2.1-rc3-3",
+            "author":"jizongyao",
+            "changes":"use original version of net module"
+        },
+        {
+            "date": "2022-5-6",
+            "version": "1.2.1-rc3-2",
+            "author": "jizongyao",
+            "changes": "fix script configure-ovs.sh error"
+        },
+        {
+            "date": "2022-4-27",
+            "version": "1.2.1-rc3-1",
+            "author": "jizongyao",
+            "changes": "remove yum config in firstboot and selinux config with podmanCopy"
+        },
+        {
+            "date": "2022-4-20",
+            "version": "1.2.1-rc2-2",
+            "author": "jizongyao",
+            "changes": "remove currentconfig check in drift watcher"
+        },
+        {
+            "date": "2022-4-20",
+            "version": "1.2.1-rc2-1",
+            "author": "jizongyao",
+            "changes": "sysn source from v1.1"
+        },
+        {
+            "date":"2022-4-13",
+            "version":"1.2.1-rc1-3",
+            "author":"jizongyao",
+            "changes":"verify currentConfig before a CoreOS variant"
+        },
+        {
+            "date":"2022-4-13",
+            "version":"1.2.1-rc1-2",
+            "author":"jizongyao",
+            "changes":"just uswfit into a CoreOS variant"
+        },
+        {
+            "date":"2022-4-13",
+            "version":"1.2.1-rc1-1",
+            "author":"jizongyao",
+            "changes":"uos support in machine config"
+        },
+        {
+            "date":"2022-3-29",
+            "version":"1.2.0-1",
+            "author":"jizongyao",
+            "changes":"change dockerfile from image && loongarch64 support"
+        }
+    ]
+}

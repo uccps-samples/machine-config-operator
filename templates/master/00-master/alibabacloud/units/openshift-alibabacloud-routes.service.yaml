@@ -1,0 +1,11 @@
+name: uccp-alibabacloud-routes.service
+enabled: false
+contents: |
+  [Unit]
+  Description=Work around Alibaba Cloud load balancer hairpin
+
+  [Service]
+  Type=simple
+  ExecStart=/bin/bash /opt/libexec/uccp-alibabacloud-routes.sh start
+  User=root
+  SyslogIdentifier=uccp-alibabacloud-routes

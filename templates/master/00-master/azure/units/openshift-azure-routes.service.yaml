@@ -1,0 +1,11 @@
+name: uccp-azure-routes.service
+enabled: false
+contents: |
+  [Unit]
+  Description=Work around Azure load balancer hairpin
+
+  [Service]
+  Type=simple
+  ExecStart=/bin/bash /opt/libexec/uccp-azure-routes.sh start
+  User=root
+  SyslogIdentifier=uccp-azure-routes

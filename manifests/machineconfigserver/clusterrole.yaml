@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: machine-config-server
+  namespace: {{.TargetNamespace}}
+rules:
+- apiGroups: ["machineconfiguration.uccp.io"]
+  resources: ["machineconfigs", "machineconfigpools"]
+  verbs: ["*"]
+- apiGroups: ["security.uccp.io"]
+  resourceNames: ["hostnetwork"]
+  resources: ["securitycontextconstraints"]
+  verbs: ["use"]

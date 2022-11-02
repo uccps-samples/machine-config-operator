@@ -1,0 +1,15 @@
+apiVersion: machineconfiguration.uccp.io/v1
+kind: MachineConfigPool
+metadata:
+  name: master
+  labels:
+    "operator.machineconfiguration.uccp.io/required-for-upgrade": ""
+    "machineconfiguration.uccp.io/mco-built-in": ""
+    pools.operator.machineconfiguration.uccp.io/master: ""
+spec:
+  machineConfigSelector:
+    matchLabels:
+      "machineconfiguration.uccp.io/role": "master"
+  nodeSelector:
+    matchLabels:
+      node-role.kubernetes.io/master: ""

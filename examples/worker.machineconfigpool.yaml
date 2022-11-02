@@ -1,0 +1,12 @@
+apiVersion: machineconfiguration.uccp.io/v1
+kind: MachineConfigPool
+metadata:
+  name: worker
+  namespace: kube-system
+spec:
+  machineConfigSelector:
+    matchLabels:
+      "machineconfiguration.uccp.io/role": "worker"
+  nodeSelector:
+    matchLabels:
+      node-role.kubernetes.io/worker: ""

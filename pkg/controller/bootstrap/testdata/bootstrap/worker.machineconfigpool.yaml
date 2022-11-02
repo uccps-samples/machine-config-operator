@@ -1,0 +1,14 @@
+apiVersion: machineconfiguration.uccp.io/v1
+kind: MachineConfigPool
+metadata:
+  name: worker
+  labels:
+    "machineconfiguration.uccp.io/mco-built-in": ""
+    pools.operator.machineconfiguration.uccp.io/worker: ""
+spec:
+  machineConfigSelector:
+    matchLabels:
+      "machineconfiguration.uccp.io/role": "worker"
+  nodeSelector:
+    matchLabels:
+      node-role.kubernetes.io/worker: ""

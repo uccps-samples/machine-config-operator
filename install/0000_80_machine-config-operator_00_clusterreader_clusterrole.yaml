@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: system:uccp:machine-config-operator:cluster-reader
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-cluster-reader: "true"
+  annotations:
+    include.release.uccp.io/ibm-cloud-managed: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
+    include.release.uccp.io/single-node-developer: "true"
+rules:
+  - apiGroups:
+      - machineconfiguration.uccp.io
+    resources:
+      - containerruntimeconfigs
+      - controllerconfigs
+      - kubeletconfigs
+      - machineconfigpools
+    verbs:
+      - get
+      - list
+      - watch
